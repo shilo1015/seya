@@ -1,2 +1,2 @@
 # seya
-<a href="seya/seya.html>seya</a>
+<a href="seya/seya.html">seya</a>
