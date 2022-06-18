@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+html{
+}
+header{
+  z-index: 10;
+  height: 64px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: #ffffff;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+}
+
+ul{
+  overflow: hidden;
+  list-style: none;
+  margin: 0 auto;
+  z-index: 20;
+}
+
+/* ヘッダ内コンテンツの間隔調整 */
+ul li{
+  display: inline-block;
+  padding: 26px 50px 20px 10px;
+}
+
+a{
+  font-size: 22px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.btn{
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn::before{
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0px;
+  width: 100%;
+  height: 4px;
+  /* 選択中以外のページ */
+  background: #FFCCFF;
+  display: block;
+  -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: scale(0,1);
+  -ms-transform: scale(0,1);
+  transform: scale(0,1);
+  -webkit-transition: transform 0.4s cubic-bezier(1,0,0,1);
+  transition: transform 0.4s cubic-bezier(1,0,0,1);
+}
+
+.btn:hover::before{
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: scale(1,1);
+  -ms-transform: scale(1,1);
+  transform: scale(1,1);
+}
+
+/* 選択中のページ */
+.btn1{
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 4px solid #FFCCFF;
+}
+
+.header{
+  padding-top: 64px;
+  height:55%;
+  width: 100%;
+}
+
+
+h1,h3{
+  text-align: center;
+  padding-top: 30px;
+}
+
+
+/* bio関連 */
+.biography{
+  border: 1px solid;
+  text-align: right;
+  padding-right: 16%;
+}
+
+.biography > iframe{
+  padding-right: 50px;
+  padding-bottom: 50px;
+}
+
+
+.bio{
+  display: inline-block;
+  text-align: left;
+}
+
+.biography > h3{
+  margin-right: 24%;
+}
+
+/* bio関連終わり */
+
+/* youtube 関連 */
+.elements{
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 328px 328px 328px; /*行の数と幅の指定  frは比での表記*/
+  grid-template-rows: 184px 184px; /*列数と高さの指定*/
+  gap: 30px; /*アイテム間の余白*/
+}
+/* youtube関連終わり */
+
+
+/*　Twitter関連 */
+.twitter-timeline{
+  margin-left: 30%;
+  margin-right: 30%;
+}
+/* Twitter関連終わり */
+
+footer{
+  z-index: 10;
+  height: 64px;
+  bottom: 0px;
+  left: 0px;
+  background-color: #ffffff;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+footer > img{
+  width: 50px;
+  height: 50px;
+}
